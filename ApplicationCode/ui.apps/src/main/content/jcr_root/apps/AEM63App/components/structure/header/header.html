@@ -1,0 +1,117 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-sm desktop">
+	<a class="navbar-brand" href="${properties.linkURL @ extension='html'}">
+		<img src="${properties.desktopLogo}" alt="${properties.alt}">
+	</a>
+	<a class="btn side-menu">
+		<img src="/etc.clientlibs/langham/clientlibs/clientlib-site/resources/images/icon/side-menu.png">
+	</a>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent" data-sly-use.navigation="com.langham.demo.core.models.NavigationModel">
+		<ul class="navbar-nav mr-auto" data-sly-list.nav="${navigation.headerNavigationList}">
+			<li class="nav-item">
+				<a class="${nav.subLinksList ? 'nav-link dropdown-toggle' : 'nav-link'}" href="${nav.linkURL}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					${nav.displayText}
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown" data-sly-test="${nav.hasSubNavigation}" data-sly-list.subNav="${nav.subLinksList}">
+					<a class="dropdown-item" href="${subNav.linkURL}">${subNav.displayText}</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<a class="btn btn-year">
+		<img src="/content/dam/langham/1865.png">
+	</a>
+	<a class="btn btn-lang">EN</a>
+	<a class="btn btn-chat">
+		<img src="/content/dam/langham/chat-btm.png">
+	</a>
+</nav>
+<nav class="navbar navbar-expand-sm mobile d-xs-block d-md-none">
+	<a class="btn">
+		<img src="/content/dam/langham/mobile-menu.png">
+	</a>
+	<a class="navbar-brand" href="${properties.linkURL @ extension='html'}">
+		<img src="${properties.mobileLogo}" alt="${properties.alt}">
+	</a>
+	<a class="btn">
+		<img src="/content/dam/langham/mobile-concierge-icon.png">
+	</a>
+</nav>
+<!-- End of Navbar -->
+<div class="d-flex align-items-center book-now">
+	<div class="booknow-text">
+		<p>Book now</p>
+	</div>
+</div>
+<div class="d-flex align-items-center book-now--container">
+	<div class="booknow-text">
+		<img src="/etc.clientlibs/langham/clientlibs/clientlib-site/resources/images/icon/arrow-icon.png">
+	</div>
+	<div class="book-now--wrapper">
+		<h2>BOOK NOW</h2>
+		<form>
+			<div class="form-field">
+				<label>CHECK IN</label>
+				<div id="checkinpicker" class="input-group date" data-date-format="dd MM,yyyy">
+				    <input class="form-control" type="text" readonly />
+				    <span class="input-group-addon"><img src="/etc.clientlibs/langham/clientlibs/clientlib-site/resources/images/icon/calendar-icon.png"></span>
+				</div>
+			</div>
+			<div class="form-field">
+				<label>NUMBER OF NIGHTS</label>
+				<select class="noofnights" id="noofnights">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                          <option value="7">7</option>
+                          <option value="8">8</option>
+                          <option value="9">9</option>
+                      </select>
+			</div>
+			<div class="form-field">
+				<label>ADULTS</label>
+				<select class="adults" id="adults">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                      </select>
+			</div>
+			<div class="form-field">
+				<label>CHILDREN (Age 2 - 12)</label>
+				<select class="children" id="children">
+					<option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                      </select>
+			</div>
+			<div class="form-field">
+				<label>INFANTS (Under 2)</label>
+				<select class="infant" id="infant">
+                          <option value="0">0</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                      </select>
+			</div>
+			<div class="form-field">
+				<label>NUMBER OF ROOMS</label>
+				<select class="noofrooms" id="noofrooms">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                      </select>
+			</div>
+			<div class="form-field">
+				<a class="btn btn-availability" href='javascript:void(0);'>Check Availability</a>
+			</div>
+		</form>
+	</div>
+</div>

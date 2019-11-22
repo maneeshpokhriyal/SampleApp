@@ -1,0 +1,339 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf500
+{\fonttbl\f0\fmodern\fcharset0 CourierNewPSMT;}
+{\colortbl;\red255\green255\blue255;\red15\green114\blue1;\red255\green255\blue255;\red233\green233\blue233;
+\red38\green38\blue38;\red0\green0\blue0;\red0\green0\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c50980\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c92941\c92941\c92941;
+\cssrgb\c20000\c20000\c20000;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20920\viewh15580\viewkind0
+\deftab720
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrnil \trbrdrl\brdrnil \trbrdrt\brdrnil \trbrdrr\brdrnil 
+\clvertalt\clvertalbase \clcbpat4 \clwWidth22600\clftsWidth3 \clbrdrt\brdrnil \clbrdrl\brdrnil \clbrdrb\brdrnil \clbrdrr\brdrnil \clpadl0 \clpadr0 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\sl352\partightenfactor0
+
+\f0\fs32 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 # Each farm configures a set of load balanced renders (i.e. remote servers)\cf5 \strokec5 \
+\pard\intbl\itap1\pardeftab720\sl352\partightenfactor0
+\cf6 \strokec6 /farms\cf5 \strokec5 \
+\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\cf2 \strokec2 # First farm entry\cf5 \strokec5 \
+\'a0\'a0\cf6 \strokec6 /website\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\'a0 \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 # Request headers that should be forwarded to the remote server.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf6 \strokec6 /clientheaders\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Forward all request headers that are end-to-end. If you want\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # to forward a specific set of headers, you'll have to list\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # them here.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 "*"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf2 \strokec2 # Hostname globbing for farm selection (virtual domain addressing)\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf6 \strokec6 /virtualhosts\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Entries will be compared against the "Host" request header\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # and an optional request URL prefix.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Examples:\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0\'a0 www.company.com\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0\'a0 intranet.*\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0\'a0 myhost:8888/mysite\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf7 \strokec7 "*"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf2 \strokec2 # The load will be balanced among these render instances\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf6 \strokec6 /renders\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /rend01\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Hostname or IP of the render\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /hostname\cf5 \strokec5  \cf7 \strokec7 "127.0.0.1"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Port of the render\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /port\cf5 \strokec5  \cf7 \strokec7 "4503"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Connect timeout in milliseconds, 0 to wait indefinitely\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # /timeout "0"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf2 \strokec2 # The filter section defines the requests that should be handled by the dispatcher.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 #\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 # Entries can be either specified using globs, or elements of the request line:\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 #\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 # (1) globs will be compared against the entire request line, e.g.:\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 #\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0\'a0\'a0\'a0 /0001 \{ /type "deny" /glob "* /index.html *" \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 #\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0\'a0 matches request "GET /index.html HTTP/1.1" but not "GET /index.html?a=b HTTP/1.1".\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 #\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 # (2) method/url/query/protocol will be compared againts the respective elements of\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0\'a0 the request line, e.g.:\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 #\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0\'a0\'a0\'a0 /0001 \{ /type "deny" /method "GET" /url "/index.html" \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 #\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0\'a0 matches both "GET /index.html" and "GET /index.html?a=b HTTP/1.1".\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 #\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 # Note: specifying elements of the request line is the preferred method.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf6 \strokec6 /filter\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Deny everything first and then allow specific entries\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0001\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "deny"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Open consoles\cf5 \strokec5 \
+\pard\intbl\itap1\pardeftab720\sl352\partightenfactor0
+\cf2 \strokec2 #\'a0\'a0\'a0\'a0 /0011 \{ /type "allow" /url "/admin/*"\'a0 \}\'a0 # allow servlet engine admin\cf5 \strokec5 \
+\cf2 \strokec2 #\'a0\'a0\'a0\'a0 /0012 \{ /type "allow" /url "/crx/*"\'a0\'a0\'a0 \}\'a0 # allow content repository\cf5 \strokec5 \
+\cf2 \strokec2 #\'a0\'a0\'a0\'a0 /0013 \{ /type "allow" /url "/system/*" \}\'a0 # allow OSGi console\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Allow non-public content directories\cf5 \strokec5 \
+\cf2 \strokec2 #\'a0\'a0\'a0\'a0 /0021 \{ /type "allow" /url "/apps/*"\'a0\'a0 \}\'a0 # allow apps access\cf5 \strokec5 \
+\cf2 \strokec2 #\'a0\'a0\'a0\'a0 /0022 \{ /type "allow" /url "/bin/*"\'a0\'a0\'a0 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0023\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "/content*"\cf5 \strokec5  \cf6 \strokec6 \}\'a0 \cf2 \strokec2 # disable this rule to allow mapped content only\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\cf2 \strokec2 #\'a0\'a0\'a0\'a0 /0024 \{ /type "allow" /url "/libs/*"\'a0\'a0 \}\cf5 \strokec5 \
+\cf2 \strokec2 #\'a0\'a0\'a0\'a0 /0025 \{ /type "deny"\'a0 /url "/libs/shindig/proxy*" \} # if you enable /libs close access to proxy\cf5 \strokec5 \
+\'a0\
+\cf2 \strokec2 #\'a0\'a0\'a0\'a0 /0026 \{ /type "allow" /url "/home/*"\'a0\'a0 \}\cf5 \strokec5 \
+\cf2 \strokec2 #\'a0\'a0\'a0\'a0 /0027 \{ /type "allow" /url "/tmp/*"\'a0\'a0\'a0 \}\cf5 \strokec5 \
+\cf2 \strokec2 #\'a0\'a0\'a0\'a0 /0028 \{ /type "allow" /url "/var/*"\'a0\'a0\'a0 \}\cf5 \strokec5 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Enable specific mime types in non-public content directories \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0041\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "*.css"\cf5 \strokec5 \'a0\'a0 \cf6 \strokec6 \}\'a0 \cf2 \strokec2 # enable css\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0042\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "*.gif"\cf5 \strokec5 \'a0\'a0 \cf6 \strokec6 \}\'a0 \cf2 \strokec2 # enable gifs\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0043\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "*.ico"\cf5 \strokec5 \'a0\'a0 \cf6 \strokec6 \}\'a0 \cf2 \strokec2 # enable icos\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0044\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "*.js"\cf5 \strokec5 \'a0\'a0\'a0 \cf6 \strokec6 \}\'a0 \cf2 \strokec2 # enable javascript\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0045\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "*.png"\cf5 \strokec5 \'a0\'a0 \cf6 \strokec6 \}\'a0 \cf2 \strokec2 # enable png\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0046\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "*.swf"\cf5 \strokec5 \'a0\'a0 \cf6 \strokec6 \}\'a0 \cf2 \strokec2 # enable flash\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0047\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "*.jpg"\cf5 \strokec5 \'a0\'a0 \cf6 \strokec6 \}\'a0 \cf2 \strokec2 # enable jpg\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0048\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "*.jpeg"\cf5 \strokec5 \'a0 \cf6 \strokec6 \}\'a0 \cf2 \strokec2 # enable jpeg\cf5 \strokec5 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Deny content grabbing\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0081\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "deny"\cf5 \strokec5 \'a0 \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "*.infinity.json"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0082\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "deny"\cf5 \strokec5 \'a0 \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "*.tidy.json"\cf5 \strokec5 \'a0\'a0\'a0\'a0 \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0083\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "deny"\cf5 \strokec5 \'a0 \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "*.sysview.xml"\cf5 \strokec5 \'a0\'a0 \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0084\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "deny"\cf5 \strokec5 \'a0 \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "*.docview.json"\cf5 \strokec5 \'a0 \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0085\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "deny"\cf5 \strokec5 \'a0 \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "*.docview.xml"\cf5 \strokec5 \'a0 \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0086\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "deny"\cf5 \strokec5 \'a0 \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "*.*[0-9].json"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\cf2 \strokec2 #\'a0\'a0\'a0\'a0 /0087 \{ /type "allow" /method "GET" /url "*.1.json" \}\'a0 # allow one-level json requests\cf5 \strokec5 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Deny query\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0090\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "deny"\cf5 \strokec5 \'a0 \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "*.query.json"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #######################################\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 ## BEGIN: AEM COMMUNITITES ADDITIONS\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #######################################\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0050\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /etc/designs/*"\cf5 \strokec5  \cf6 \strokec6 \}\'a0\'a0\'a0\'a0 \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0051\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /etc/clientlibs/*"\cf5 \strokec5  \cf6 \strokec6 \}\'a0 \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0052\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /bin/statistics/tracker/*"\cf5 \strokec5  \cf6 \strokec6 \} \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0054\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "* /home/users/*/*/profile.form.html*"\cf5 \strokec5  \cf6 \strokec6 \} \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0057\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /home/users/*/profile/*"\cf5 \strokec5  \cf6 \strokec6 \} \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0059\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /etc/clientcontext/*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0063\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "* /system/sling/logout*"\cf5 \strokec5  \cf6 \strokec6 \} \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0064\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /etc/cloudservices/*"\cf5 \strokec5  \cf6 \strokec6 \} \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0062\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "/libs/cq/personalization/*"\cf5 \strokec5 \'a0 \cf6 \strokec6 \}\'a0 \cf2 \strokec2 # enable personalization\cf5 \strokec5 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # For Enablement features\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0170\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "/libs/granite/csrf/token.json*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0171\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "POST /content/sites/*/resources/en/*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0172\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /content/communities/enablement/reports/*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0173\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /content/sites/*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0174\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /content/communities/scorm/*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0175\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "GET /content/sites/*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0176\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "GET /libs/granite/security/userinfo.json"\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0177\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /url\cf5 \strokec5  \cf7 \strokec7 "GET /libs/granite/security/currentuser.json"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Enable CSRF token otherwise nothings works.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /5001\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /libs/granite/csrf/token.json *"\cf6 \strokec6 \}\'a0\'a0\'a0\'a0\'a0\'a0\'a0 \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Allow SCF User Model to bootstrap as it depends on the granite user\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /5002\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /libs/granite/security/currentuser.json*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Allow Communities Site Logout button work\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /5003\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /system/sling/logout.html*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Allow i18n to load correctly\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /5004\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /libs/cq/i18n/dict.en.json *"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Allow social json get pattern.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /6002\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET *.social.*.json*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Allow loading of templates\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /6003\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /services/social/templates*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Allow SCF User model to check moderator rules\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /6005\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /services/social/getLoggedInUser?moderatorCheck=*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Allow CKEditor to load which uses a query pattern not sufficed by regular glob above.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /6006\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /etc/clientlibs/social/thirdparty/ckeditor/*.js?t=*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /6007\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /etc/clientlibs/social/thirdparty/ckeditor/*.css?t=*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Allow Fonts from Communities to load\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /6050\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET *.woff *"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /6051\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET *.ttf *"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Enable CQ Security checkpoint for component guide.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /7001\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "GET /libs/cq/security/userinfo.json?cq_ck=*"\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #######################################\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 ## END: AEM COMMUNITITES ADDITIONS\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #######################################\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\
+\'a0\'a0\'a0\'a0\cf2 \strokec2 # The cache section regulates what responses will be cached and where.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf6 \strokec6 /cache\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # The docroot must be equal to the document root of the webserver. The\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # dispatcher will store files relative to this directory and subsequent\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # requests may be "declined" by the dispatcher, allowing the webserver\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # to deliver them just like static files.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /docroot\cf5 \strokec5  \cf7 \strokec7 "/opt/dispatcher"\cf5 \strokec5 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Sets the level upto which files named ".stat" will be created in the \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # document root of the webserver. When an activation request for some \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # page is received, only files within the same subtree are affected \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # by the invalidation.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #/statfileslevel "0"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Flag indicating whether to cache responses to requests that contain\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # authorization information.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /allowAuthorized\cf5 \strokec5  \cf7 \strokec7 "1"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Flag indicating whether the dispatcher should serve stale content if\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # no remote server is available.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #/serveStaleOnError "0"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # The rules section defines what responses should be cached based on\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # the requested URL. Please note that only the following requests can\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # lead to cacheable responses:\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # - HTTP method is GET\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # - URL has an extension\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # - Request has no query string\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # - Request has no "Authorization" header (unless allowAuthorized is 1)\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /rules\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0000\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # the globbing pattern to be compared against the url\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # example: *\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 -> everything\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0\'a0\'a0\'a0\'a0\'a0\'a0 : /foo/bar.*\'a0\'a0\'a0 -> only the /foo/bar documents\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0\'a0\'a0\'a0\'a0\'a0\'a0 : /foo/bar/*\'a0\'a0\'a0 -> all pages below /foo/bar\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0\'a0\'a0\'a0\'a0\'a0\'a0 : /foo/bar[./]* -> all pages below and /foo/bar itself\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0\'a0\'a0\'a0\'a0\'a0\'a0 : *.html\'a0\'a0\'a0\'a0\'a0\'a0\'a0 -> all .html files\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "*"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #######################################\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 ## BEGIN: AEM COMMUNITITES ADDITIONS\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #######################################\'a0\'a0\'a0\'a0\'a0 \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Never cache the client-side .social.json calls\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0001\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "deny"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "*.social.json*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Never cache the user-specific .json requests\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0002\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "deny"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "/libs/granite/csrf/token.json*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0003\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "deny"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "/libs/granite/security/currentuser.json*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0004\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "deny"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "/libs/granite/security/userinfo.json*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Never cache the private community groups pages in case - add your own deny rules in there\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0005\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "deny"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "/content/*/groups/*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Never cache the assignments page in case the enablement feature is in use - add your own deny rules in there\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0006\cf5 \strokec5  \cf6 \strokec6 \{ /type\cf5 \strokec5  \cf7 \strokec7 "deny"\cf5 \strokec5  \cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "/content/*/assignments/*"\cf5 \strokec5  \cf6 \strokec6 \}\cf5 \strokec5 \
+\pard\intbl\itap1\pardeftab720\sl352\partightenfactor0
+\cf5 \cb3 \outl0\strokewidth0 \'a0\'a0\'a0\'a0\'a0\'a0\cf6 /0007\cf5  \cf6 \{\cf5  \cf6 /glob\cf5  \cf7 \'93*.nocache.html*\'94\cf5  \cf6 /type\cf5  \cf7 \'93deny\'94\cf5  \cf6 \}\cf5 \cb3 \outl0\strokewidth0 \strokec5 \
+\pard\intbl\itap1\pardeftab720\sl352\partightenfactor0
+\cf5 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #######################################\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 ## END: AEM COMMUNITITES ADDITIONS\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #######################################\'a0\'a0\'a0\'a0\'a0 \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # The invalidate section defines the pages that are "invalidated" after\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # any activation. Please note that the activated page itself and all \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # related documents are flushed on an modification. For example: if the \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # page /foo/bar is activated, all /foo/bar.* files are removed from the\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # cache.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /invalidate\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0000\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "*"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /type\cf5 \strokec5  \cf7 \strokec7 "deny"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0001\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Consider all HTML files stale after an activation.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "*.html"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0002\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "/etc/segmentation.segment.js"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /0003\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "*/analytics.sitecatalyst.js"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /type\cf5 \strokec5  \cf7 \strokec7 "allow"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # The allowedClients section restricts the client IP addresses that are\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # allowed to issue activation requests.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /allowedClients\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # Uncomment the following to restrict activation requests to originate\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # from "localhost" only.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #/0000\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0 /glob "*"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0 /type "deny"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #/0001\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0 /glob "127.0.0.1"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0 /type "allow"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # The ignoreUrlParams section contains query string parameter names that\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # should be ignored when determining whether some request's output can be\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # cached or delivered from cache.\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 # In this example configuration, the "q" parameter will be ignored. \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #/ignoreUrlParams\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0 /0001 \{ /glob "*" /type "deny" \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0 /0002 \{ /glob "q" /type "allow" \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf2 \strokec2 #\'a0 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /enableTTL\cf5 \strokec5  \cf7 \strokec7 "1"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\
+\'a0\'a0\'a0\'a0\cf2 \strokec2 # The statistics sections dictates how the load should be balanced among the\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf2 \strokec2 # renders according to the media-type. \cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf6 \strokec6 /statistics\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /categories\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /html\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "*.html"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /others\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \{\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 /glob\cf5 \strokec5  \cf7 \strokec7 "*"\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \
+\'a0\'a0\cf6 \strokec6 \}\cf5 \strokec5 \cell \lastrow\row
+}

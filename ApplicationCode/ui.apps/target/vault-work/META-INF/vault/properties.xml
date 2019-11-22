@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>AEM63App - UI apps</comment>
+<entry key="createdBy">maneeshpokhriyal</entry>
+<entry key="name">AEM63App.ui.apps</entry>
+<entry key="created">2019-11-22T04:32:34.651+0800</entry>
+<entry key="groupId">AEM63App</entry>
+<entry key="version">1.0-SNAPSHOT</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">AEM63App</entry>
+<entry key="description">UI apps package for AEM63App</entry>
+<entry key="artifactId">AEM63App.ui.apps</entry>
+<entry key="path">/etc/packages/AEM63App/AEM63App.ui.apps.zip</entry>
+</properties>
